@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Info Pagina</title>
+    <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+    <header>
+        <h1>Info Pagina</h1>
+    </header>
+
+    <nav>
+        <button onclick="window.location.href='index.html'">Home</button>
+        <button onclick="window.location.href='type.html'">Type</button>
+        <button onclick="window.location.href='info.html'">Info</button>
+        <button onclick="window.location.href='contact.html'">Contact</button>
+    </nav>
+
+    <aside class="sidebar">
+        <button onclick="scrollToSection('section1')">Is vliegen veilig?</button>
+        <button onclick="scrollToSection('section2')">Belangrijke zaken om te weten voordat je vliegt</button>
+        <button onclick="scrollToSection('section3')">Info</button>
+        <button onclick="scrollToSection('section4')">Wat mag niet tijdens het vliegen?</button>
+        <button onclick="scrollToSection('section5')">Interessante weetjes</button>
+        <button onclick="scrollToSection('section6')">Hoe werkt een vliegtuig?</button>
+        <button onclick="scrollToNav()">Terug naar boven</button>
+    </aside>
+
+    <main class="main-content">
+        <div id="section1" class="section">
+            <h2>Is vliegen veilig?</h2>
+            <p>Vliegen is een van de veiligste manieren om te reizen. Hier is waarom:</p>
+            <p><b>1. Strikte veiligheidsnormen:</b> Luchtvaartautoriteiten zoals de FAA en EASA stellen wereldwijde veiligheidsnormen vast en voeren strikte controles uit. Dit zorgt ervoor dat elke vlucht aan hoge veiligheidsstandaarden voldoet.</p>
+            <p><b>2. Geavanceerde technologie:</b> Vliegtuigen zijn uitgerust met de nieuwste technologieën en systemen. Regelmatig onderhoud en inspecties garanderen dat alles in topconditie is.</p>
+            <p><b>3. Grondige training:</b> Piloten en cabinepersoneel ondergaan uitgebreide en regelmatige trainingen. Ze zijn voorbereid op elke mogelijke situatie, inclusief noodgevallen.</p>
+            <p><b>4. Uitstekende statistieken:</b> Vliegen is statistisch veel veiliger dan andere vervoermiddelen, zoals autorijden. De kans op een ongeluk is extreem klein.</p>
+            <p><b>5. Noodprotocollen:</b> Er zijn uitgebreide noodprocedures en getrainde hulpdiensten beschikbaar om snel te reageren in geval van een probleem.</p>
+            <p><b>6. Samengevat:</b> Vliegen heeft een indrukwekkend veiligheidstrackrecord en biedt een betrouwbare manier van reizen dankzij strikte regels, technologische vooruitgang en goed opgeleid personeel.</p>
+        </div>
+
+        <div id="section2" class="section">
+            <h2>Belangrijke zaken om te weten voordat je vliegt</h2>
+            <p>Hier zijn enkele handige tips en zaken om te weten voordat je gaat vliegen:</p>
+            <p><b>1. Reispapieren en documenten:</b></p>
+            <p>Paspoort en visum: Zorg ervoor dat je paspoort geldig is en controleer of je een visum nodig hebt voor je bestemming.</p>
+            <p>Instapkaart: Check-in online en print je instapkaart of sla deze op je telefoon op.</p>
+
+            <p><b>2. Bagage:</b></p>
+            <p>Bagageregels: Controleer de bagagevoorschriften van je luchtvaartmaatschappij voor zowel handbagage als ruimbagage. Houd je aan de gewichtslimieten en verboden items.</p>
+            <p>Label je bagage: Zet je contactinformatie op je bagage in geval van verlies.</p>
+
+            <p><b>3. Voorbereiding voor de veiligheidscontrole:</b></p>
+            <p>Vloeistoffen: Vloeistoffen in je handbagage moeten in flessen van maximaal 100 ml zitten en in een doorzichtige, hersluitbare zak van maximaal 1 liter worden meegenomen.</p>
+            <p>Elektronica: Zorg ervoor dat je elektronische apparaten gemakkelijk bereikbaar zijn, omdat je deze mogelijk apart moet laten controleren.</p>
+
+            <p><b>4. Vliegtijd en aankomst:</b></p>
+            <p>Vliegroute en tijd: Controleer de vertrektijd en aankomsttijd van je vlucht. Houd rekening met mogelijke vertragingen.</p>
+            <p>Luchthaven en gate: Weet op welke luchthaven je aankomt en waar je gate zich bevindt. Houd ook rekening met de tijd die nodig is om door de beveiliging te komen.</p>
+
+            <p><b>5. Gezondheid en comfort:</b></p>
+            <p>Hydratatie: Drink voldoende water en vermijd alcohol en cafeïne tijdens de vlucht om uitdroging te voorkomen.</p>
+            <p>Kleding: Draag comfortabele kleding en schoenen. Het kan koud zijn in het vliegtuig, dus neem een lichte jas of deken mee.</p>
+            <p>Beweging: Sta regelmatig op en beweeg rond om je bloedsomloop te stimuleren, vooral tijdens lange vluchten.</p>
+
+            <p><b>6. Luchthavenvoorzieningen:</b></p>
+            <p>Lounge toegang: Overweeg toegang tot een luchthavenlounge voor extra comfort en voorzieningen tijdens lange wachttijden.</p>
+            <p>Eten en drinken: Informeer naar eet- en drinkopties op de luchthaven en in het vliegtuig, vooral als je dieetbeperkingen hebt.</p>
+
+            <p><b>7. Veiligheidsinstructies:</b></p>
+            <p>Veiligheidsdemonstratie: Let goed op de veiligheidsinstructies van de cabinebemanning. Ze kunnen belangrijke informatie bevatten over noodprocedures.</p>
+
+            <p><b>8. Communicatie:</b></p>
+            <p>Telefooninstellingen: Zet je telefoon op vliegtuigmodus en controleer of je een internationale roamingoptie hebt als je tijdens je reis bereikbaar wilt zijn.</p>
+
+            <p>Door deze punten in gedachten te houden, maak je je vliegervaring veel soepeler en aangenamer.</p>
+        </div>
+
+        <div id="section3" class="section">
+            <h2>Info</h2>
+            <p><b>Vliegtuigsoorten</b></p>
+            <p>Passagiersvliegtuigen: Ontworpen voor het vervoer van mensen. Voorbeelden zijn de Airbus A320 en Boeing 737.</p>
+            <p>Vrachtvliegtuigen: Gespecialiseerd in het vervoeren van goederen. Voorbeelden zijn de Boeing 747-8F en Antonov An-225.</p>
+            <p>Privévliegtuigen: Kleinere vliegtuigen voor privégebruik, zoals de Cessna Citation en de Gulfstream G650.</p>
+
+            <p><b>Technologie en ontwikkeling</b></p>
+            <p>Motoren: Vliegtuigen worden aangedreven door straalmotoren of turbopropmotoren, afhankelijk van het type en de grootte van het vliegtuig.</p>
+            <p>Avionica: Moderne vliegtuigen hebben geavanceerde avionicasystemen voor navigatie, communicatie en controle.</p>
+            <p>Materialen: Vliegtuigen worden vaak gebouwd met lichtgewicht materialen zoals composieten en titanium om brandstofefficiëntie te verbeteren.</p>
+
+            <p><b>Veiligheidsaspecten</b></p>
+            <p>Onderhoud: Vliegtuigen ondergaan regelmatig onderhoud en inspecties om te voldoen aan strenge veiligheidsnormen.</p>
+            <p>Opleiding: Piloten en cabinepersoneel ontvangen uitgebreide training, inclusief noodprocedures en klantenservice.</p>
+            <p>Technologie: Vliegtuigen zijn uitgerust met meerdere veiligheidssystemen, zoals automatische piloot en noodsystemen.</p>
+
+            <p><b>Luchtvaartgeschiedenis</b></p>
+            <p>Eerste vliegtuig: De gebroeders Wright volbrachten de eerste succesvolle gecontroleerde vlucht op 17 december 1903 met de Wright Flyer.</p>
+            <p>De Jet Age: De introductie van de Boeing 707 in de jaren 1950 markeerde het begin van het jet tijdperk en maakte internationale vluchten gemakkelijker.</p>
+            <p>Concorde: De supersonische Concorde, die van 1976 tot 2003 vloog, was een pionier in supersonisch reizen.</p>
+
+            <p><b>Vliegtuighuizen en -centra</b></p>
+            <p>Boeing: De Boeing Company, opgericht in 1916, is een van de grootste vliegtuigfabrikanten ter wereld en produceert modellen zoals de 737 en 787.</p>
+            <p>Airbus: Airbus, opgericht in 1970, is een grote concurrent van Boeing en produceert populaire vliegtuigen zoals de A320 en A380.</p>
+
+            <p><b>Luchtvaartterminologie</b></p>
+            <p>Stuwkracht: De kracht die een vliegtuig naar voren duwt, geleverd door de motoren.</p>
+            <p>Lift: De opwaartse kracht die een vliegtuig in de lucht houdt, gegenereerd door de vleugels.</p>
+            <p>Rol: De beweging van een vliegtuig om zijn lengteas, wat de richting van de vleugels verandert.</p>
+            <p>Helling: De beweging van een vliegtuig om zijn dwarsas, wat de neus van het vliegtuig omhoog of omlaag beweegt.</p>
+        </div>
+
+        <div id="section4" class="section">
+            <h2>Wat mag niet tijdens het vliegen?</h2>
+            <p><b>1. Verboden voorwerpen:</b> Vliegtuigen mogen geen gevaarlijke voorwerpen zoals wapens, explosieven of scherpe voorwerpen bevatten.</p>
+            <p><b>2. Verboden activiteiten:</b> Roken is verboden aan boord van alle commerciële vliegtuigen. Het gebruik van elektronische sigaretten kan ook beperkt zijn.</p>
+            <p><b>3. Gedragsregels:</b> Gedragsregels moeten worden nageleefd. Respecteer de cabinebemanning en volg hun instructies op. Storend gedrag kan leiden tot juridische stappen.</p>
+            <p><b>4. Verplichte veiligheidsmaatregelen:</b> Veiligheidsinstructies moeten worden gevolgd, zoals het dragen van je veiligheidsgordel tijdens het opstijgen en landen.</p>
+            <p><b>5. Verboden items in de handbagage:</b> Scherpe voorwerpen zoals messen en scharen mogen niet in je handbagage zitten. Controleer de regels van de luchtvaartmaatschappij voor specifieke verboden items.</p>
+        </div>
+
+        <div id="section5" class="section">
+            <h2>Interessante weetjes</h2>
+            <p><b>1. Het grootste vliegtuig ter wereld:</b> De Antonov An-225 is het grootste vrachtvliegtuig ter wereld, met een spanwijdte van 88,4 meter.</p>
+            <p><b>2. De snelste commerciële vlucht:</b> De Concorde kon snelheden bereiken tot 2.180 km/u, wat hem de snelste commerciële vliegtuig ter wereld maakte.</p>
+            <p><b>3. De grootste luchthaven ter wereld:</b> King Fahd International Airport in Saoedi-Arabië is de grootste luchthaven ter wereld qua oppervlakte, met meer dan 780 vierkante kilometer.</p>
+            <p><b>4. Vliegtuigontwerpen:</b> De vleugelontwerpen van vliegtuigen zijn vaak geïnspireerd door de vleugels van vogels voor een betere aerodynamica.</p>
+            <p><b>5. De eerste vlucht:</b> De eerste commerciële vlucht vond plaats op 1 januari 1914 van St. Petersburg naar Tampa, met een vliegtuig van de luchtvaartmaatschappij Benoist.</p>
+            <p><b>6. De langste rechtstreekse vlucht:</b> De vlucht van Singapore Airlines van Singapore naar New York is de langste rechtstreekse vlucht ter wereld, met een afstand van ongeveer 15.300 kilometer.</p>
+        </div>
+
+        <div id="section6" class="section">
+            <h2>Hoe werkt een vliegtuig?</h2>
+            <p><b>1. Stuwkracht:</b> Vliegtuigen worden aangedreven door motoren die stuwkracht genereren. Dit kan door straalmotoren of turbopropmotoren zijn.</p>
+            <p><b>2. Lift:</b> Lift wordt gecreëerd door de vleugels van het vliegtuig. De luchtstroom over de vleugels zorgt ervoor dat het vliegtuig stijgt.</p>
+            <p><b>3. Gewicht:</b> Het gewicht van het vliegtuig moet worden overwonnen door de lift om te kunnen opstijgen.</p>
+            <p><b>4. Luchtweerstand:</b> Luchtweerstand is de kracht die het vliegtuig tegenwerkt tijdens de vlucht. Ontwerpers proberen deze weerstand te minimaliseren om de efficiëntie te verhogen.</p>
+            <p><b>5. Besturing:</b> Piloten gebruiken roeren, hoogte- en rolvlakken om het vliegtuig te besturen. Deze elementen helpen bij het sturen, stijgen en dalen van het vliegtuig.</p>
+            <p><b>6. Navigatie:</b> Moderne vliegtuigen gebruiken geavanceerde navigatiesystemen zoals GPS en radar om hun route te volgen en veilig te landen.</p>
+        </div>
+    </main>
+    <script>
+        function scrollToSection(sectionId) {
+            document.getElementById(sectionId).scrollIntoView({ behavior: 'smooth' });
+        }
+        function scrollToNav() {
+    document.querySelector('nav').scrollIntoView({ behavior: 'smooth' });
+}
+
+    </script>
+    <footer>
+        <p>&copy; 2024 Vliegtuigen. Gemaakt door Rohan Benarsie.</p>
+    </footer>
+</body>
+</html>

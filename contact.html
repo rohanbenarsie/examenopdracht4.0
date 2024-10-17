@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact</title>
+    <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+    <header>
+        <h1>Contact</h1>
+    </header>
+
+    <nav>
+        <button onclick="window.location.href='index.html'">Home</button>
+        <button onclick="window.location.href='type.html'">Type</button>
+        <button onclick="window.location.href='info.html'">Info</button>
+        <button onclick="window.location.href='contact.html'">Contact</button>
+    </nav>
+
+    <section id="contact">
+        <div class="container">
+            <h1 class="heading">Contact Form</h1>
+            <form action="https://formspree.io/f/xpzegage" method="POST">
+                <div class="form-group">
+                    <label for="name">Full Name</label>
+                    <input type="text" id="name" name="name" placeholder="Full Name" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" placeholder="Email" required>
+                </div>
+                <div class="form-group">
+                    <label for="continent">Continent</label>
+                    <select id="continent" name="Continent">
+                        <option>Africa</option>
+                        <option>Antarctica</option>
+                        <option>Asia</option>
+                        <option>Europe</option>
+                        <option>North America</option>
+                        <option>South America</option>
+                        <option>Australia</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="message">Message</label>
+                    <textarea id="message" name="message" placeholder="Message" required></textarea>
+                </div>
+                <button type="submit">Submit</button>
+            </form>
+        </div>
+    </section>
+    <footer>
+        <p>&copy; 2024 Vliegtuigen. Gemaakt door Rohan Benarsie.</p>
+    </footer>
+</body>
+</html>

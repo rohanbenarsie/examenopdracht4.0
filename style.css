@@ -1,0 +1,361 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f9f9e9;
+    overflow-x: hidden;
+}
+
+header {
+    background: black;
+    color: white;
+    text-align: center;
+    padding: 1rem;
+}
+
+nav {
+    position: sticky;
+    top: 0;
+    background: #f9f9e9;
+    color: white;
+    text-align: center;
+    padding: 1rem;
+    z-index: 1000; 
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+nav.sticky {
+    transform: translateY(0);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+nav.scrolled {
+    transform: translateY(-50px);
+    box-shadow: none;
+}
+
+nav button {
+    font-size: 1rem;
+    margin: 0 1rem;
+    padding: 0.75rem 1.5rem;
+    cursor: pointer;
+    border: none;
+    border-radius: 25px;
+    background-color: black;
+    color: white;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+nav button:hover {
+    background-color: #0056b3;
+    transform: translateY(-2px);
+}
+
+.info-test {
+    text-align: center;
+    margin: 2rem auto;
+    max-width: 1200px; 
+}
+
+.photo-gallery {
+    text-align: center;
+    position: relative;
+    margin: 0 auto;
+    max-width: 1200px; 
+}
+
+.horizontal-photo {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    display: block;
+}
+
+.side-photos {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.side-photo {
+    width: 33%; 
+    max-width: 400px;
+    height: auto;
+    display: block;
+}
+
+.content-section {
+    padding: 1rem;
+    text-align: center;
+}
+
+.content-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 1rem;
+}
+
+.fotolinksboven {
+    max-width: 100%;
+    width: 500px;
+    height: auto;
+    margin-bottom: 1rem;
+    border-radius: 10px;
+}
+
+.text-container {
+    text-align: center;
+}
+
+.info-button {
+    margin-top: 1rem;
+    padding: 0.75rem 1.5rem;
+    cursor: pointer;
+    border: none;
+    border-radius: 25px;
+    background-color: black;
+    color: white;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.info-button:hover {
+    background-color: #0056b3;
+    transform: translateY(-2px);
+}
+
+main.grid-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    gap: 1rem;
+    padding: 1rem;
+    height: 80vh;
+    position: relative;
+}
+
+.faq-answer p {
+    font-size: 0.9rem;
+}
+
+.faq-item {
+    margin-bottom: 20px;
+    padding: 20px;
+    border: 1px solid #ddd;
+    background-color: #f9f9f9;
+}
+
+.faq-question {
+    font-size: 1.2em;
+    margin-bottom: 10px;
+}
+
+.faq-answer {
+    font-size: 1em;
+    line-height: 1.6em;
+}
+
+.item1 {
+    grid-column: 1 / 2;
+    grid-row: 1 / 2;
+}
+
+.item2 {
+    grid-column: 3 / 4;
+    grid-row: 1 / 2;
+}
+
+.item3 {
+    grid-column: 1 / 2;
+    grid-row: 2 / 3;
+}
+
+.item4 {
+    grid-column: 3 / 4;
+    grid-row: 2 / 3;
+}
+
+.item5 {
+    grid-column: 2 / 3;
+    grid-row: 1 / 2;
+}
+
+.item6 {
+    grid-column: 2 / 3;
+    grid-row: 2 / 3;
+}
+
+footer {
+    text-align: center;
+    padding: 1rem;
+    background-color: #f1f1f1;
+}
+
+.photo-text-section {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: space-between;
+}
+
+.photo-text-block {
+    flex: 1 1 calc(25% - 1rem);
+    box-sizing: border-box;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    margin-bottom: 1rem;
+}
+
+body.passenger-page {
+    margin-left: 15px;
+    margin-right: 15px;
+}
+
+.text-block p {
+    margin-left: 15px; 
+}
+
+.text-block h3 {
+    margin-left: 15px; 
+}
+
+.photo-text-block img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    display: block;
+}
+
+.photo-text-block:hover img {
+    transform: scale(1.05);
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.3);
+}
+
+#contact {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    padding: 2rem 0;
+    background-color: #fcf2e8;
+}
+
+#contact .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    max-width: 600px;
+    background-color: #fff;
+    padding: 2rem;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
+#contact form {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    margin-right: 25px;
+    margin-left: 25px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+    width: 100%;
+    padding: 15px;
+    font-size: 18px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.form-group textarea {
+    resize: vertical;
+    min-height: 100px;
+}
+
+button[type="submit"] {
+    width: 100%;
+    padding: 15px;
+    font-size: 18px;
+    background-color: #333;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button[type="submit"]:hover {
+    background-color: #555;
+}
+
+.sidebar {
+    background-color: black;
+    color: white;
+    padding: 1rem;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 150px; 
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    overflow-y: auto;
+    z-index: 1000; 
+}
+
+.sidebar button {
+    width: 100%;
+    padding: 0.75rem;
+    margin-bottom: 0.5rem;
+    background-color: #555; 
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    text-align: center;
+}
+
+.sidebar button:hover {
+    background: #d1d1d1;
+}
+
+.main-content {
+    margin-left: 170px; 
+    padding: 1rem;
+}
+
+.section {
+    margin-bottom: 2rem;
+    padding-left: 10px;
+    max-width: 1200px;
+}
+
+p {
+    margin-bottom: 1rem;
+}
+
+body.passenger-page {
+    margin-left: 15px;
+}
