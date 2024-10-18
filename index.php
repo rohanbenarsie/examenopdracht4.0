@@ -4,27 +4,27 @@ session_start();
 include("connection.php");
 include("functions.php");
 
+// Controleer of de gebruiker is ingelogd, anders doorsturen naar signup.php
 $user_data = check_login($con);
 
-// Controleer of de gebruiker is ingelogd
+// Als de gebruiker niet is ingelogd, stuur door naar signup.php
 if (!isset($_SESSION['user_id'])) {
-    // Gebruiker is niet ingelogd, doorverwijzen naar de signup pagina
-    header("Location: signup.php");
-    exit();
+    header("Location: signup.php"); // Zorg ervoor dat ze altijd naar signup.php gaan als ze niet zijn ingelogd
+    die;
 }
 ?>
 
 <!DOCTYPE html>
 <html>
-<head>
-    <title>My website</title>
-</head>
-<body>
+    <head>
+        <title>My website</title>
+    </head>
+    <body>
 
+    <!-- Voeg de logout-knop toe -->
     <a href="logout.php">Logout</a>
-    <h1>Welcome to the index page</h1>
+    <h1>Welkom op de indexpagina</h1>
+    <p>Hello, <?php echo $user_data['user_name']; ?></p>
 
-    <br>
-    Hello, <?php echo $user_data['user_name']; ?>
-</body>
+    </body>
 </html>
