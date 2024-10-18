@@ -34,25 +34,44 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
 <head>
     <title>Login</title>
     <style type="text/css">
+      
+body {
+    background-color: #f9f9e9;; /
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
         #text {
-            height: 25px;
-            border-radius: 5px;
-            padding: 4px;
-            border: solid thin #aaa;
-        }
-        #button {
-            padding: 10px;
-            width: 100px;
-            color: white;
-            background-color: lightblue;
-            border: none;
-        }
+            
+    height: 30px; /* Iets hoger */
+    border-radius: 5px;
+    padding: 10px; /* Grotere padding binnenin de velden */
+    border: solid thin #aaa;
+    width: 100%; /* Zorg dat de velden 100% van de boxbreedte zijn */
+    font-size: 18px; /* Grotere tekst */
+}
+
+        
+#button {
+    padding: 15px; /* Grotere knop */
+    width: 50%; /* Zorg dat de knop net zo breed is als de invoervelden */
+    color: black;
+    background-color: #f9f9e9;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 18px; /* Grotere tekst in de knop */
+}
+
         #box {
-            background-color: grey;
+            background-color: lightgray;
             margin: auto;
-            width: 300px;
-            padding: 20px;
+            width: 1200px;
+            height: 600px;
+            padding: 80px;
         }
+            
     </style>
 </head>
 <body>
