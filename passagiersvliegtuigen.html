@@ -4,20 +4,44 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Vliegtuigen</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <link rel="stylesheet" href="style.css">
+    <script src="scripts.js" defer></script>
 </head>
-<body class="passenger-page">
-    <header>
+<body>
+    <header class="bg-dark text-white text-center py-4">
         <h1>Passagiersvliegtuigen</h1>
     </header>
 
-    <nav>
-        <button onclick="window.location.href='index.html'">Home</button>
-        <button onclick="window.location.href='type.html'">Type</button>
-        <button onclick="window.location.href='info.html'">Info</button>
-        <button onclick="window.location.href='contact.html'">contact</button>
-        <button onclick="window.location.href='Cargovliegtuigen.html'">Cargovliegtuigen</button>
-        <button onclick="window.location.href='login.php'">Uitloggen</button>
+    <nav class="navbar navbar-expand-lg navbar-light bg-dark sticky-top">
+        <div class="container">
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <button class="nav-link btn text-white" onclick="window.location.href='index.html'">Home</button>
+                    </li>
+                    <li class="nav-item">
+                        <button class="nav-link btn text-white" onclick="window.location.href='type.html'">Type</button>
+                    </li>
+                    <li class="nav-item">
+                        <button class="nav-link btn text-white" onclick="window.location.href='info.html'">Info</button>
+                    </li>
+                    <li class="nav-item">
+                        <button class="nav-link btn text-white" onclick="window.location.href='contact.html'">Contact</button>
+                    </li>
+                    <li class="nav-item">
+                        <button class="nav-link btn text-white" onclick="window.location.href='Cargovliegtuigen.html'">Cargovliegtuigen</button>
+                    </li>
+                    <li class="nav-item">
+                        <button class="nav-link btn text-white" onclick="window.location.href='login.php'">Uitloggen</button>
+                    </li>
+                </ul>
+            </div>
+        </div>
     </nav>
 
     <main>
@@ -217,5 +241,9 @@
     <footer>
         <p>&copy; 2024 Vliegtuigen. Gemaakt door Rohan Benarsie.</p>
     </footer>
+        <!-- Bootstrap JS, Popper.js, jQuery -->
+        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </body>
 </html>
