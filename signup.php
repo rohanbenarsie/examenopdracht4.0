@@ -8,30 +8,41 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
     $user_name = $_POST['user_name'];
     $password = $_POST['password'];
 
-    // Validatie
+    // Validatie om te controleren of de gebruikersnaam en wachtwoord niet leeg zijn
     if (!empty($user_name) && !empty($password) && !is_numeric($user_name)) {
-        // Genereer een unieke gebruikers-ID
-        $user_id = random_num(20);
+        
+        // Controleer of de gebruikersnaam al bestaat
+        $check_user_query = "SELECT * FROM users WHERE user_name = '$user_name' LIMIT 1";
+        $check_result = mysqli_query($con, $check_user_query);
 
-        // Wachtwoord hashen voor veilige opslag
-        $hashed_password = password_hash($password, PASSWORD_DEFAULT);
-
-        // SQL-query om gebruiker op te slaan
-        $query = "INSERT INTO users (user_id, user_name, password) VALUES ('$user_id', '$user_name', '$hashed_password')";
-
-        // Voer de query uit en controleer op fouten
-        if (mysqli_query($con, $query)) {
-            // Redirect naar index.html na succesvolle registratie
-            header("Location: index.html");
-            die; // Stop verdere uitvoering
+        if (mysqli_num_rows($check_result) > 0) {
+            // Als de gebruikersnaam al bestaat
+            echo "Gebruikersnaam bestaat al. Probeer een andere.";
         } else {
-            echo "Fout bij registratie: " . mysqli_error($con);
+            // Genereer een unieke gebruikers-ID
+            $user_id = random_num(20);
+
+            // Wachtwoord hashen voor veilige opslag
+            $hashed_password = password_hash($password, PASSWORD_DEFAULT);
+
+            // SQL-query om gebruiker op te slaan
+            $query = "INSERT INTO users (user_id, user_name, password) VALUES ('$user_id', '$user_name', '$hashed_password')";
+
+            // Voer de query uit en controleer op fouten
+            if (mysqli_query($con, $query)) {
+                // Redirect naar index.html na succesvolle registratie
+                header("Location: index.html");
+                die; // Stop verdere uitvoering
+            } else {
+                echo "Fout bij registratie: " . mysqli_error($con);
+            }
         }
     } else {
         echo "Vul een geldige gebruikersnaam en wachtwoord in!";
     }
 }
 ?>
+
 
 <!DOCTYPE html>
 <html lang="nl">
