@@ -18,7 +18,7 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
         // Controleer het wachtwoord
         if (password_verify($password, $user_data['password'])) {
             $_SESSION['user_id'] = $user_data['user_id']; // Sla de gebruikers-ID op in de sessie
-            header("Location: index.html"); // Verander deze regel naar index.html
+            header("Location: index.html"); 
             exit(); // Stop verdere uitvoering
         } else {
             echo "Ongeldig wachtwoord.";

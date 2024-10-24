@@ -330,8 +330,13 @@ button[type="submit"]:hover {
 
 /* Responsieve stijlen voor verschillende schermformaten */
 @media (max-width: 1024px) { /* Tablet */
+    html, body {
+        overflow-y: auto;
+    }
+
     .sidebar {
         width: 120px;
+        overflow-y: auto; /* Zorg dat de sidebar ook scrollbaar blijft */
     }
 
     .main-content {
@@ -354,8 +359,11 @@ button[type="submit"]:hover {
     #contact form {
         width: 100%;
         margin: 0;
+        min-height: auto;
     }
 }
+
+   
 
 @media (max-width: 768px) { /* Mobile */
     nav {
