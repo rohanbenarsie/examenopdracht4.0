@@ -15,12 +15,14 @@ header {
 }
 
 /* Navigatie */
+/* Navigatie */
 nav {
     position: sticky;
     top: 0;
     background: #f9f9e9;
     text-align: center;
     padding: 1rem;
+    z-index: 1000;
     z-index: 1000;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
@@ -49,9 +51,11 @@ nav button:hover {
 }
 
 /* Secties en afbeeldingen */
+/* Secties en afbeeldingen */
 .info-test {
     text-align: center;
     margin: 2rem auto;
+    max-width: 1200px;
     max-width: 1200px;
 }
 
@@ -59,6 +63,7 @@ nav button:hover {
     text-align: center;
     position: relative;
     margin: 0 auto;
+    max-width: 1200px;
     max-width: 1200px;
 }
 
@@ -77,6 +82,7 @@ nav button:hover {
 }
 
 .side-photo {
+    width: 33%;
     width: 33%;
     max-width: 400px;
     height: auto;
@@ -108,6 +114,7 @@ nav button:hover {
 }
 
 /* Knoppen */
+/* Knoppen */
 .info-button {
     margin-top: 1rem;
     padding: 0.75rem 1.5rem;
@@ -125,6 +132,7 @@ nav button:hover {
     transform: translateY(-2px);
 }
 
+/* Grid container voor FAQ */
 /* Grid container voor FAQ */
 main.grid-container {
     display: grid;
@@ -159,8 +167,11 @@ main.grid-container {
 
 .item1, .item2, .item5, .item6 {
     grid-column: span 2;
+.item1, .item2, .item5, .item6 {
+    grid-column: span 2;
 }
 
+/* Footer */
 /* Footer */
 footer {
     text-align: center;
@@ -168,6 +179,7 @@ footer {
     background-color: #f1f1f1;
 }
 
+/* Responsieve secties */
 /* Responsieve secties */
 .photo-text-section {
     display: flex;
@@ -189,6 +201,9 @@ footer {
 /* Foto tekst-blokken */
 .text-block p, .text-block h3 {
     margin-left: 15px;
+/* Foto tekst-blokken */
+.text-block p, .text-block h3 {
+    margin-left: 15px;
 }
 
 .photo-text-block img {
@@ -203,6 +218,7 @@ footer {
     box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.3);
 }
 
+/* Contact sectie */
 /* Contact sectie */
 #contact {
     display: flex;
@@ -227,12 +243,14 @@ footer {
 
 #contact form {
     width: 100%;
+    width: 100%;
     display: flex;
     flex-direction: column;
     margin-right: 25px;
     margin-left: 25px;
 }
 
+/* Formulierelementen */
 /* Formulierelementen */
 .form-group {
     display: flex;
@@ -245,6 +263,7 @@ footer {
     font-weight: bold;
 }
 
+.form-group input, .form-group select, .form-group textarea {
 .form-group input, .form-group select, .form-group textarea {
     width: 100%;
     padding: 15px;
@@ -275,6 +294,7 @@ button[type="submit"]:hover {
 }
 
 /* Sidebar */
+/* Sidebar */
 .sidebar {
     background-color: black;
     color: white;
@@ -283,6 +303,7 @@ button[type="submit"]:hover {
     top: 0;
     left: 0;
     width: 150px;
+    width: 150px;
     height: 100%;
     display: flex;
     flex-direction: column;
@@ -290,12 +311,14 @@ button[type="submit"]:hover {
     align-items: center;
     overflow-y: auto;
     z-index: 1000;
+    z-index: 1000;
 }
 
 .sidebar button {
     width: 100%;
     padding: 0.75rem;
     margin-bottom: 0.5rem;
+    background-color: #555;
     background-color: #555;
     color: white;
     border: none;
@@ -311,9 +334,11 @@ button[type="submit"]:hover {
 
 .main-content {
     margin-left: 170px;
+    margin-left: 170px;
     padding: 1rem;
 }
 
+/* Secties */
 /* Secties */
 .section {
     margin-bottom: 2rem;

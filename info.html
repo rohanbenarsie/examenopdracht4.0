@@ -3,26 +3,98 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Info Pagina</title>
+    <title>info</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <link rel="stylesheet" href="style.css">
+    <style>
+        /* Sidebar styling */
+        .sidebar {
+            background-color: #343a40;
+            color: white;
+            padding: 15px;
+            min-width: 200px;
+            height: 100vh; /* Volledige hoogte van de viewport */
+            position: fixed; /* Vast aan de zijkant */
+        }
 
+        /* Verberg de sidebar op schermen kleiner dan 768px */
+        @media (max-width: 768px) {
+            .sidebar {
+                display: none; /* Sidebar verbergen op kleinere schermen */
+            }
+        }
+
+        /* Hoofdinhoud styling */
+        .main-content {
+            margin-left: 220px; /* Zorg ervoor dat de inhoud niet onder de sidebar zit */
+            padding: 20px; /* Ruimte voor de inhoud */
+        }
+
+        /* Voeg ook een stijl toe voor de hoofdinhoud op kleinere schermen */
+        @media (max-width: 768px) {
+            .main-content {
+                margin-left: 0; /* Geen marge aan de linkerkant */
+            }
+        }
+
+        .sidebar h2 {
+            font-size: 1.25rem;
+            margin-bottom: 20px;
+        }
+
+        .sidebar button {
+            background: none;
+            border: none;
+            color: white;
+            text-align: left;
+            padding: 10px;
+            width: 100%;
+            font-size: 1rem;
+        }
+
+        .sidebar button:hover {
+            background-color: #495057;
+            cursor: pointer;
+        }
+    </style>
 </head>
 <body>
-    <header>
-        <h1>Info Pagina</h1>
+    <header class="bg-dark text-white text-center py-4">
+        <h1>Type</h1>
     </header>
 
-    <nav>
-        <button onclick="window.location.href='index.html'">Home</button>
-        <button onclick="window.location.href='type.html'">Type</button>
-        <button onclick="window.location.href='info.html'">Info</button>
-        <button onclick="window.location.href='contact.html'">Contact</button>
-        <button onclick="window.location.href='login.php'">Uitloggen</button>
+    <nav class="navbar navbar-expand-lg navbar-light bg-dark sticky-top">
+        <div class="container">
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <button class="nav-link btn text-white" onclick="window.location.href='index.html'">Home</button>
+                    </li>
+                    <li class="nav-item">
+                        <button class="nav-link btn text-white" onclick="window.location.href='type.html'">Type</button>
+                    </li>
+                    <li class="nav-item">
+                        <button class="nav-link btn text-white" onclick="window.location.href='info.html'">Info</button>
+                    </li>
+                    <li class="nav-item">
+                        <button class="nav-link btn text-white" onclick="window.location.href='contact.html'">Contact</button>
+                    </li>
+                    <li class="nav-item">
+                        <button class="nav-link btn text-white" onclick="window.location.href='login.php'">Uitloggen</button>
+                    </li>
+                </ul>
+            </div>
+        </div>
     </nav>
 
     <aside class="sidebar">
+        <h2>Inhoudsnavigatie</h2>
         <button onclick="scrollToSection('section1')">Is vliegen veilig?</button>
-        <button onclick="scrollToSection('section2')">Belangrijke zaken om te weten voordat je vliegt</button>
+        <button onclick="scrollToSection('section2')">Belangrijke zaken om te weten</button>
         <button onclick="scrollToSection('section3')">Info</button>
         <button onclick="scrollToSection('section4')">Wat mag niet tijdens het vliegen?</button>
         <button onclick="scrollToSection('section5')">Interessante weetjes</button>
@@ -63,95 +135,61 @@
 
             <p><b>5. Gezondheid en comfort:</b></p>
             <p>Hydratatie: Drink voldoende water en vermijd alcohol en cafeïne tijdens de vlucht om uitdroging te voorkomen.</p>
-            <p>Kleding: Draag comfortabele kleding en schoenen. Het kan koud zijn in het vliegtuig, dus neem een lichte jas of deken mee.</p>
-            <p>Beweging: Sta regelmatig op en beweeg rond om je bloedsomloop te stimuleren, vooral tijdens lange vluchten.</p>
-
-            <p><b>6. Luchthavenvoorzieningen:</b></p>
-            <p>Lounge toegang: Overweeg toegang tot een luchthavenlounge voor extra comfort en voorzieningen tijdens lange wachttijden.</p>
-            <p>Eten en drinken: Informeer naar eet- en drinkopties op de luchthaven en in het vliegtuig, vooral als je dieetbeperkingen hebt.</p>
-
-            <p><b>7. Veiligheidsinstructies:</b></p>
-            <p>Veiligheidsdemonstratie: Let goed op de veiligheidsinstructies van de cabinebemanning. Ze kunnen belangrijke informatie bevatten over noodprocedures.</p>
-
-            <p><b>8. Communicatie:</b></p>
-            <p>Telefooninstellingen: Zet je telefoon op vliegtuigmodus en controleer of je een internationale roamingoptie hebt als je tijdens je reis bereikbaar wilt zijn.</p>
-
-            <p>Door deze punten in gedachten te houden, maak je je vliegervaring veel soepeler en aangenamer.</p>
+            <p>Kleding: Draag comfortabele kleding en schoenen, en breng een extra laag mee voor het geval het koud is in het vliegtuig.</p>
         </div>
 
         <div id="section3" class="section">
-            <h2>Info</h2>
-            <p><b>Vliegtuigsoorten</b></p>
-            <p>Passagiersvliegtuigen: Ontworpen voor het vervoer van mensen. Voorbeelden zijn de Airbus A320 en Boeing 737.</p>
-            <p>Vrachtvliegtuigen: Gespecialiseerd in het vervoeren van goederen. Voorbeelden zijn de Boeing 747-8F en Antonov An-225.</p>
-            <p>Privévliegtuigen: Kleinere vliegtuigen voor privégebruik, zoals de Cessna Citation en de Gulfstream G650.</p>
-
-            <p><b>Technologie en ontwikkeling</b></p>
-            <p>Motoren: Vliegtuigen worden aangedreven door straalmotoren of turbopropmotoren, afhankelijk van het type en de grootte van het vliegtuig.</p>
-            <p>Avionica: Moderne vliegtuigen hebben geavanceerde avionicasystemen voor navigatie, communicatie en controle.</p>
-            <p>Materialen: Vliegtuigen worden vaak gebouwd met lichtgewicht materialen zoals composieten en titanium om brandstofefficiëntie te verbeteren.</p>
-
-            <p><b>Veiligheidsaspecten</b></p>
-            <p>Onderhoud: Vliegtuigen ondergaan regelmatig onderhoud en inspecties om te voldoen aan strenge veiligheidsnormen.</p>
-            <p>Opleiding: Piloten en cabinepersoneel ontvangen uitgebreide training, inclusief noodprocedures en klantenservice.</p>
-            <p>Technologie: Vliegtuigen zijn uitgerust met meerdere veiligheidssystemen, zoals automatische piloot en noodsystemen.</p>
-
-            <p><b>Luchtvaartgeschiedenis</b></p>
-            <p>Eerste vliegtuig: De gebroeders Wright volbrachten de eerste succesvolle gecontroleerde vlucht op 17 december 1903 met de Wright Flyer.</p>
-            <p>De Jet Age: De introductie van de Boeing 707 in de jaren 1950 markeerde het begin van het jet tijdperk en maakte internationale vluchten gemakkelijker.</p>
-            <p>Concorde: De supersonische Concorde, die van 1976 tot 2003 vloog, was een pionier in supersonisch reizen.</p>
-
-            <p><b>Vliegtuighuizen en -centra</b></p>
-            <p>Boeing: De Boeing Company, opgericht in 1916, is een van de grootste vliegtuigfabrikanten ter wereld en produceert modellen zoals de 737 en 787.</p>
-            <p>Airbus: Airbus, opgericht in 1970, is een grote concurrent van Boeing en produceert populaire vliegtuigen zoals de A320 en A380.</p>
-
-            <p><b>Luchtvaartterminologie</b></p>
-            <p>Stuwkracht: De kracht die een vliegtuig naar voren duwt, geleverd door de motoren.</p>
-            <p>Lift: De opwaartse kracht die een vliegtuig in de lucht houdt, gegenereerd door de vleugels.</p>
-            <p>Rol: De beweging van een vliegtuig om zijn lengteas, wat de richting van de vleugels verandert.</p>
-            <p>Helling: De beweging van een vliegtuig om zijn dwarsas, wat de neus van het vliegtuig omhoog of omlaag beweegt.</p>
+            <h2>Vliegtuigen en maatschappijen</h2>
+            <p>Vliegtuigen komen in verschillende soorten en maten, afhankelijk van hun functie:</p>
+            <p><b>Commerciële vliegtuigen:</b> Voor het vervoeren van passagiers, zoals de Boeing 737 en Airbus A320.</p>
+            <p><b>Vrachtvliegtuigen:</b> Speciaal ontworpen voor het vervoeren van goederen, zoals de Boeing 747 Freighter.</p>
+            <p><b>Privévliegtuigen:</b> Kleinere vliegtuigen voor individueel gebruik, bijvoorbeeld de Cessna 172.</p>
+            <p><b>Vliegtuigmaatschappijen:</b></p>
+            <p>Vliegtuigmaatschappijen variëren van low-cost tot luxe maatschappijen. Enkele bekende zijn KLM, Lufthansa, en Ryanair.</p>
         </div>
 
         <div id="section4" class="section">
             <h2>Wat mag niet tijdens het vliegen?</h2>
-            <p><b>1. Verboden voorwerpen:</b> Vliegtuigen mogen geen gevaarlijke voorwerpen zoals wapens, explosieven of scherpe voorwerpen bevatten.</p>
-            <p><b>2. Verboden activiteiten:</b> Roken is verboden aan boord van alle commerciële vliegtuigen. Het gebruik van elektronische sigaretten kan ook beperkt zijn.</p>
-            <p><b>3. Gedragsregels:</b> Gedragsregels moeten worden nageleefd. Respecteer de cabinebemanning en volg hun instructies op. Storend gedrag kan leiden tot juridische stappen.</p>
-            <p><b>4. Verplichte veiligheidsmaatregelen:</b> Veiligheidsinstructies moeten worden gevolgd, zoals het dragen van je veiligheidsgordel tijdens het opstijgen en landen.</p>
-            <p><b>5. Verboden items in de handbagage:</b> Scherpe voorwerpen zoals messen en scharen mogen niet in je handbagage zitten. Controleer de regels van de luchtvaartmaatschappij voor specifieke verboden items.</p>
+            <p>Er zijn verschillende items en gedragingen die niet zijn toegestaan tijdens een vlucht:</p>
+            <p><b>Verboden items:</b> Vuurwapens, explosieven, scherpe voorwerpen en bepaalde vloeistoffen zijn niet toegestaan in de handbagage of ruimbagage.</p>
+            <p><b>Gedragingen:</b> Agressief of storend gedrag kan leiden tot verwijdering uit het vliegtuig en juridische gevolgen.</p>
+            <p><b>Vloeistoffen:</b> Vloeistoffen in handbagage moeten voldoen aan de veiligheidsvoorschriften, met een maximum van 100 ml per container.</p>
         </div>
 
         <div id="section5" class="section">
             <h2>Interessante weetjes</h2>
-            <p><b>1. Het grootste vliegtuig ter wereld:</b> De Antonov An-225 is het grootste vrachtvliegtuig ter wereld, met een spanwijdte van 88,4 meter.</p>
-            <p><b>2. De snelste commerciële vlucht:</b> De Concorde kon snelheden bereiken tot 2.180 km/u, wat hem de snelste commerciële vliegtuig ter wereld maakte.</p>
-            <p><b>3. De grootste luchthaven ter wereld:</b> King Fahd International Airport in Saoedi-Arabië is de grootste luchthaven ter wereld qua oppervlakte, met meer dan 780 vierkante kilometer.</p>
-            <p><b>4. Vliegtuigontwerpen:</b> De vleugelontwerpen van vliegtuigen zijn vaak geïnspireerd door de vleugels van vogels voor een betere aerodynamica.</p>
-            <p><b>5. De eerste vlucht:</b> De eerste commerciële vlucht vond plaats op 1 januari 1914 van St. Petersburg naar Tampa, met een vliegtuig van de luchtvaartmaatschappij Benoist.</p>
-            <p><b>6. De langste rechtstreekse vlucht:</b> De vlucht van Singapore Airlines van Singapore naar New York is de langste rechtstreekse vlucht ter wereld, met een afstand van ongeveer 15.300 kilometer.</p>
+            <p>Wist je dat...</p>
+            <p>- Het oudste nog vliegende vliegtuig ter wereld een 1911 Demoiselle is?</p>
+            <p>- De snelste commerciële vlucht van New York naar Londen slechts 2 uur en 52 minuten duurde?</p>
+            <p>- Er meer dan 100.000 commerciële vluchten per dag over de hele wereld zijn?</p>
         </div>
 
         <div id="section6" class="section">
             <h2>Hoe werkt een vliegtuig?</h2>
-            <p><b>1. Stuwkracht:</b> Vliegtuigen worden aangedreven door motoren die stuwkracht genereren. Dit kan door straalmotoren of turbopropmotoren zijn.</p>
-            <p><b>2. Lift:</b> Lift wordt gecreëerd door de vleugels van het vliegtuig. De luchtstroom over de vleugels zorgt ervoor dat het vliegtuig stijgt.</p>
-            <p><b>3. Gewicht:</b> Het gewicht van het vliegtuig moet worden overwonnen door de lift om te kunnen opstijgen.</p>
-            <p><b>4. Luchtweerstand:</b> Luchtweerstand is de kracht die het vliegtuig tegenwerkt tijdens de vlucht. Ontwerpers proberen deze weerstand te minimaliseren om de efficiëntie te verhogen.</p>
-            <p><b>5. Besturing:</b> Piloten gebruiken roeren, hoogte- en rolvlakken om het vliegtuig te besturen. Deze elementen helpen bij het sturen, stijgen en dalen van het vliegtuig.</p>
-            <p><b>6. Navigatie:</b> Moderne vliegtuigen gebruiken geavanceerde navigatiesystemen zoals GPS en radar om hun route te volgen en veilig te landen.</p>
+            <p>Vliegtuigen werken op basis van aerodynamica. Hier zijn de belangrijkste principes:</p>
+            <p><b>Lift:</b> Vliegtuigen genereren lift door de luchtstroom over hun vleugels. De vorm van de vleugel zorgt ervoor dat de lucht sneller over de bovenkant van de vleugel stroomt dan eronder, wat resulteert in een drukverschil dat het vliegtuig omhoog trekt.</p>
+            <p><b>Stuwkracht:</b> Motoren genereren stuwkracht die het vliegtuig vooruit duwt. Dit kan door propellers of straalmotoren.</p>
+            <p><b>Besturing:</b> Piloten gebruiken roeren, flaps en andere instrumenten om het vliegtuig te besturen en te navigeren.</p>
         </div>
     </main>
-    <script>
-        function scrollToSection(sectionId) {
-            document.getElementById(sectionId).scrollIntoView({ behavior: 'smooth' });
-        }
-        function scrollToNav() {
-    document.querySelector('nav').scrollIntoView({ behavior: 'smooth' });
-}
-
-    </script>
     <footer>
         <p>&copy; 2024 Vliegtuigen. Gemaakt door Rohan Benarsie.</p>
     </footer>
+
+    <script>
+        function scrollToSection(sectionId) {
+            const section = document.getElementById(sectionId);
+            section.scrollIntoView({ behavior: 'smooth' });
+        }
+
+        function scrollToNav() {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+    </script>
+
+    <!-- Bootstrap JS (optioneel, voor functionaliteit) -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </body>
 </html>

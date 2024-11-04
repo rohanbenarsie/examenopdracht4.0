@@ -18,6 +18,12 @@ if (!isset($_SESSION['user_id'])) {
 <html>
     <head>
         <title>My website</title>
+        <style>
+            body{
+                background-color: #f9f9e9;
+            }       
+            
+            </style>
     </head>
     <body>
 

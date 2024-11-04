@@ -25,6 +25,12 @@ Ga naar http://localhost/examenvliegtuigen4.0/ in je browser.
 Registreer een nieuwe gebruiker of log in met een bestaande account.
 Bekijk de verschillende vliegtuigtypes en airlines.
 
+## User stories
+(ga naar USER_STORIES.md)
+
+## Gerealiseerde functionaliteiten
+(ga naar REALISATIES.md)
+
 
 Projectstructuur
 |-- examenvliegtuigen4.0
